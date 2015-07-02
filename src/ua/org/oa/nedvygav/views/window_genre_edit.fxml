@@ -1,0 +1,16 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER_LEFT" spacing="6">
+    <children>
+        <Label text="Enter genre name:" />
+        <TextField fx:id="nameField"/>
+        <Button text="Save" onAction="#handleSaveClick"/>
+    </children>
+    <padding>
+        <javafx.geometry.Insets top="6" left="6" right="6" bottom="6"/>
+    </padding>
+</VBox>

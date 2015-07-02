@@ -1,0 +1,10 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox maxHeight="Infinity" fx:id="Shop" fx:controller="ua.org.oa.nedvygav.controllers.ShopController"
+      xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="6">
+    <Button maxWidth="Infinity" maxHeight="Infinity" text="GENRES" onAction="#handleGenresButton" />
+    <Button maxWidth="Infinity" maxHeight="Infinity" text="ARTISTS" onAction="#handleArtistsButton" />
+    <Button maxWidth="Infinity" maxHeight="Infinity" text="ALBUMS" onAction="#handleAlbumsButton" />
+    <Button maxWidth="Infinity" maxHeight="Infinity" text="AUDIOS" onAction="#handleAudiosButton" />
+    <Button maxWidth="Infinity" maxHeight="Infinity" text="CART" onAction="#handleCartButton" />
+</VBox>

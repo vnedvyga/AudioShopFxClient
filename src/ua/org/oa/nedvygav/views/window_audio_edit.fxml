@@ -1,0 +1,25 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="6">
+    <children>
+        <Label fx:id="invalidDataLabel"  id="Label" stylesheets="@../style/invalid_data_label.css" />
+        <Label text="Enter audio name:" />
+        <TextField fx:id="nameField"/>
+        <Label text="Enter audio duration:" />
+        <TextField fx:id="durationField"/>
+        <Label text="Enter audio price:" />
+        <TextField fx:id="priceField"/>
+        <ComboBox maxWidth="Infinity"  fx:id="artistDropBox" promptText="Select artist"
+                  onShowing="#handleArtistDropBox" onAction="#handleArtistDropBoxAction" />
+        <ComboBox disable="true" maxWidth="Infinity"  fx:id="albumDropBox" promptText="Select album"
+                  onShowing="#handleAlbumDropBox"/>
+        <Button text="Save" onAction="#handleSaveClick"/>
+    </children>
+    <padding>
+        <javafx.geometry.Insets top="6" left="6" right="6" bottom="6"/>
+    </padding>
+</VBox>

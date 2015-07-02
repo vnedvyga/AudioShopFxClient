@@ -1,0 +1,42 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<VBox fx:controller="ua.org.oa.nedvygav.controllers.AudiosController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="6">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="View">
+                    <items>
+                        <MenuItem text="Genres" onAction="#handleMenuGenresClick"/>
+                        <MenuItem text="Artists" onAction="#handleMenuArtistsClick"/>
+                        <MenuItem text="Albums" onAction="#handleMenuAlbumsClick"/>
+                        <MenuItem text="Audios" onAction="#handleMenuAudiosClick"/>
+                        <MenuItem text="Cart" onAction="#handleMenuCartClick"/>
+                    </items>
+                </Menu>
+                <Menu text="Edit">
+                    <items>
+                        <MenuItem text="Create" onAction="#handleCreateClick"/>
+                        <MenuItem fx:id="updateMenuItem" disable="true" text="Update" onAction="#handleUpdateClick"/>
+                        <MenuItem fx:id="deleteMenuItem" disable="true" text="Delete" onAction="#handleDeleteClick"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ListView fx:id="audiosView" onMouseClicked="#handleListClick"/>
+            <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS" alignment="BASELINE_RIGHT">
+                <Button fx:id="buyButton" alignment="BASELINE_RIGHT" text="Buy" onAction="#handleBuyClick" />
+                <Label fx:id="buyResponseLabel" />
+            </HBox>
+    </children>
+    <padding>
+        <javafx.geometry.Insets top="6" left="6" right="6" bottom="6"/>
+    </padding>
+</VBox>
